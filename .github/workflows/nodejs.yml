@@ -7,8 +7,8 @@ jobs:
     container: node:latest
     steps:
     - uses: actions/checkout@v2
-    - run: yarn install
-    - run: yarn test
+    - run: npm ci
+    - run: npm test
       env:
         CI: true
         REACT_APP_SUPABASE_URL: ${{ secrets.REACT_APP_SUPABASE_URL }}
